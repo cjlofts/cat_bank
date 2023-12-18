@@ -1,0 +1,5 @@
+<div class="transaction-card">
+  <p class="subtrtaction-icon">-</p>
+  <p>Withdrawl: <span style="font-weight: bold">£<%= sprintf('%.2f', (transaction.transactable.amount.to_f / 100)) %></span></p>
+  <p class="card-details">On: <span style="font-weight: bold"><%= transaction.created_at.to_date %></span></p>
+</div>

@@ -1,0 +1,41 @@
+<div class="card">
+  <h1 class="summary">Account Summary</h1>
+  <p>Balance: <span style="font-weight: bold">£<%= sprintf('%.2f', (@account.balance.to_f / 100)) %></span></p>
+  <div class="action-containerr">
+    <button data-controller="account" data-action="click->account#toggleCard" data-account-variable="deposit">Deposit</button>
+    <button data-controller="account" data-action="click->account#toggleCard" data-account-variable="withdrawl">Withdrawl</button>
+    <button data-controller="account" data-action="click->account#toggleCard" data-account-variable="transfer">Transfer</button>
+  </div>
+</div>
+
+<div class="card" id="deposit-card">
+  <%= form_with model: [@account, @deposit] do |form| %>
+    <%= form.label :£ %>
+    <%= form.number_field :deposit, in: 1.0..10_000.0, step: 0.01 %>
+    <div>
+      <button class="save-button"><%= form.submit "Deposit" %></button>
+    </div>
+  <% end %>
+</div>
+
+<div class="card" id="withdrawl-card">
+  <%= form_with model: [@account, @withdrawl] do |form| %>
+    <%= form.label :£ %>
+    <%= form.number_field :withdrawl, in: 1.0..10_000.0, step: 0.01 %>
+    <div>
+      <button class="save-button"><%= form.submit "Withdraw" %></button>
+    </div>
+  <% end %>
+</div>
+
+<div class="card" id="transfer-card">
+  <p class="card-details">Send Silveuros from your account to another user</p>
+  <%= form_with model: [@account, @transfer_out] do |form| %>
+    <%= form.label :£ %>
+    <%= form.number_field :transfer, in: 1.0..10_000.0, step: 0.01 %>
+    <%= form.select :user_email, @user_emails %>
+    <div>
+      <button class="save-button"><%= form.submit "Transfer" %></button>
+    </div>
+  <% end %>
+</div>

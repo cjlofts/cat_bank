@@ -1,0 +1,3 @@
+<% @account_transactions.each do |transaction| %>
+  <%= render partial: "#{transaction.transactable_type.underscore}_card", locals: {transaction: transaction} %>
+<% end %>

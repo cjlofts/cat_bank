@@ -1,0 +1,150 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #093AB0;
+}
+
+ul :hover {
+  background-color: #052D90;
+}
+
+li {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+} 
+
+.overall-wrapper {
+  background-color: #F9F2ED;
+}
+
+.card {
+  background-color: white;
+  font-size: 1.3rem;
+  width: 24rem;
+  height: 12rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.2rem;
+  margin-top: 2.2rem;
+  color: #333;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.41);
+  padding: 24px;
+  color: #093AB0;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #093AB0;
+}
+
+.summary {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.action-container {
+  padding: 18px;
+}
+
+.action-containerr {
+  margin-top: 24px;
+}
+
+.action-containerr > button {
+  background-color: #093AB0;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.action-containerr > button:hover {
+  background-color: #052D90;
+}
+
+.save-button {
+  background-color: #093AB0;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-top: 12px;
+}
+
+#deposit-card {
+  display: none;
+}
+
+#withdrawl-card {
+  display: none;
+}
+
+#transfer-card {
+  display: none;
+}
+
+.transaction-card {
+  background-color: white;
+  font-size: 1.3rem;
+  width: 24rem;
+  height: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.2rem;
+  margin-top: 2.2rem;
+  color: #333;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.41);
+  padding: 24px;
+  color: #093AB0;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #093AB0;
+}
+
+.addition-icon {
+  float: left;
+  color: white;
+  background-color: green;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.subtrtaction-icon {
+  float: left;
+  color: white;
+  background-color: red;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.card-details {
+  font-size: 0.7rem;
+}
