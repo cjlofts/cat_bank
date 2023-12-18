@@ -1,24 +1,15 @@
-# README
+# Catbank
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+To run the app locally
+Assume running on MacOS & brew is installed
+Assume rails 7.1.2, ruby 3.2.2, bundler & postgresql installed
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+clone the repo from `git@github.com:cjlofts/cat_bank.git`
+`cd` into the catbank derectory & run `bundle install`
+start postgres with `brew services start postgresql`
+run `rails db:create db:migrate`
+run `rake assets:precompile` (incase having problems with Tailwind fonts in the asset pipeline)
+run `rails s` & visit `http://localhost:3000/` in a browser
