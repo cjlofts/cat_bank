@@ -11,3 +11,10 @@
 * run `rake assets:precompile` (incase having problems with Tailwind fonts in the asset pipeline)
 * run `rails s` & visit `http://localhost:3000/` in a browser
 
+**App Frameworks & Approach**
+* Disclaimer that the styling is certainly leaves a lot to be desires & there's plenty of validations/optimisations that would need to be implented!!!
+* Used as much out of the box rails functionality as possible, included the Devise gem to get user sign_in behaviour handled
+* Stimulus adds a tiny bit of JS, not enough functionality to need a front-end framework
+* Postgres used for the DB but any DB could be used with a simple data model
+* Currently the overdraft facility of Catbank is very generous! Withdrawls are allowed that takes the User's account into negative equity
+* Tailwindcss used for fonts but currently the (very minimal) stying is added with HTML/CSS for simlicity 
